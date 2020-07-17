@@ -210,6 +210,15 @@ EMAIL_PORT = 587
 
 DEFAULT_FROM_EMAIL = 'Get Water Wise Buffalo <hello@getwaterwisebuffalo.org>'
 
+# Microsoft Graph
+MS_APP_ID=os.getenv('MS_APP_ID')
+MS_APP_SECRET=os.getenv('MS_APP_SECRET')
+MS_REDIRECT=os.getenv('MS_REDIRECT')
+MS_SCOPES=os.getenv('MS_SCOPES')
+MS_AUTHORITY=os.getenv('MS_AUTHORITY')
+MS_AUTHORIZE_ENDPOINT=os.getenv('MS_AUTHORIZE_ENDPOINT')
+MS_TOKEN_ENDPOINT=os.getenv('MS_TOKEN_ENDPOINT')
+
 # AWS
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
