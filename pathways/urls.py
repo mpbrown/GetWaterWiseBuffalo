@@ -1,16 +1,18 @@
 from django.urls import path
 
-from . import views
+from pathways import views
 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='pathways-home'),
     path('about/', views.AboutView.as_view(),name='pathways-about'),
     path('nondiscrimination/', views.NondiscriminationView.as_view(), name='pathways-nondiscrimination'),
     path('privacy/', views.PrivacyView.as_view(), name='pathways-privacy'),
+    path('metrics/', views.ProgramMetricsView.as_view(), name='pathways-metrics'),
     path('apply/', views.ApplyOverviewAssistanceView.as_view(),
         name='pathways-apply'),
     path('apply/discount-overview/', views.ApplyDiscountView.as_view(),
         name='pathways-apply-discount-overview'),
+    # Amnesty Debt Forgiveness
     path('forgive/overview/', views.ForgiveOverviewView.as_view(),
         name='pathways-forgive-overview'),
     path('forgive/city-resident/', views.ForgiveCityResidentView.as_view(),
@@ -19,6 +21,8 @@ urlpatterns = [
         name='pathways-forgive-additional-questions'),
     path('forgive/resident-info/', views.ForgiveResidentInfoView.as_view(),
         name='pathways-forgive-resident-info'),
+    path('forgive/refer/', views.ForgiveReferralView.as_view(),
+        name='pathways-forgive-refer'),
     path('forgive/review-application/', views.ForgiveReviewApplicationView.as_view(),
         name='pathways-forgive-review-application'),
     path('forgive/confirmation/', views.ForgiveConfirmationView.as_view(),
@@ -72,6 +76,8 @@ urlpatterns = [
         name='pathways-apply-review-application'),
     path('apply/legal/', views.LegalView.as_view(),
         name='pathways-apply-legal'),
+    path('apply/refer/', views.ReferralView.as_view(),
+        name='pathways-apply-refer'),
     path('apply/signature/', views.SignatureView.as_view(),
         name='pathways-apply-signature'),
     # Documents
